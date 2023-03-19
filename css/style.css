@@ -1,0 +1,683 @@
+html{
+    box-sizing: border-box;
+}
+
+
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+    text-decoration: none;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+img{
+    max-width: 100%;
+}
+
+.container-name{
+    color: #8643DC;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.container-name a {
+    position: relative;
+}
+
+.container-name a.active::after,
+.container-name a:hover::after{
+    position: absolute;
+    content: "";
+    display: block;
+    margin-top: 10px;
+    width: 50px;
+    height: 2px;
+    background-color: #8643DC;
+}
+
+.description{
+    margin-top: 27px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 48px;
+}
+
+.line{
+    display: flex;
+}
+
+/* ==================== */
+
+body{
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+.container{
+    max-width: 1421px;
+    padding: 49px 165px 0;
+    margin: 0 auto;
+}
+
+/* ==================== */
+
+
+
+/* ========== ШАПКА ========== */
+
+.nav{
+    display: grid;
+    grid-template-columns: 140px 350px 601px;
+    align-items: center;
+    height: 70px;
+}
+
+.menu{
+    display: flex;
+    gap: 30px;
+}
+
+.burger{
+    padding-left: 531px;
+}
+
+/* ==================== */
+
+
+
+/* ========== ОБО МНЕ ========== */
+
+.about{
+    min-height: calc(100vh-70px);
+}
+
+.text2-12{
+    padding-top: 108px;
+    margin-bottom: 20px;
+}
+
+.text2-1{
+    font-size: 24px;
+    font-weight: 500;
+    color: #666666;
+}
+
+.text2-2{
+    font-size: 64px;
+    font-weight: 700;
+    color: #25202F;
+}
+
+.text2-3{
+    font-size: 21px;
+    font-weight: 400;
+    color:#25202F;
+    margin-bottom: 54px;
+}
+
+.pc2-1{
+    /*width: 535px;
+    height: 622px;*/
+    position: absolute;
+    margin-left: 499px;
+    margin-top: 24px;
+    z-index: 1;
+}
+
+/* Дизайн кнопки */
+
+.button-name {
+    display: inline-block;
+    max-width: 200px;
+    max-height: 60px;
+    background-color: #8643DC;
+    padding: 18px 49px 18px 50px;
+    border-radius: 100px;
+    border: none;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+    
+ /* Увеличение и смена цвета при нажатии */
+
+    button:active {
+    background: red; transition: background 0s;
+    }
+
+/* Модальное окно */
+
+.modal{
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    padding: 30px; /* отступы от края*/
+    overflow-y: auto;
+    display: none;
+}
+
+.modal-main{
+    position: relative;
+    max-width: 600px;
+    max-height: 400px;
+    background-color: #d1ddfdd2;
+    margin: auto;
+    color: black;
+    border-radius: 100px;
+    padding: 25px 150px 50px 70px; /* отступы внутри*/
+    cursor: default;
+}
+
+.modal-close{
+    background-color: transparent;
+    
+    cursor: pointer;
+    font-size: 22px;
+    color: red;
+    position: absolute;
+    top: 28px;
+    right: 28px;
+    outline: 1px solid transparent;
+    outline-offset: 3px;
+    transition: outline-color .15s ease-in-out;
+    border-radius: 100px;
+    
+    text-align: center;
+    display: block;
+    
+}
+
+.modal-close:focus-visible{
+    outline-color: red;
+}
+
+.modal-title{
+    text-align: center;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 26px;
+
+    color: #000000;
+
+    margin-bottom: 10px;
+    margin-left: 45px;
+}
+
+.messenger{
+    text-decoration: none;
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+
+    color: #000000;
+}
+
+/* === Конец кнопки === */
+
+/* ==================== */
+
+
+
+/* ========== СЕРВИСЫ ========== */
+
+.services{
+    padding-top: 101px;
+    padding-bottom: 150px;
+}
+
+.services-content{
+    padding-top: 50px;
+    display: grid;
+    grid-template-columns: 380px 380px 350px;
+}
+
+.pc-name3{
+    margin-left: 20px;
+    margin-top: 15px;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 31.75px;
+    color: #25202F;
+}
+
+.text3{
+    max-width: 350px;
+    margin-top: 21.41px;
+
+    font-style: Regular;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    color: #47444E;
+}
+
+/* ==================== */
+
+/* ========== ПОРТФОЛИО ========== */
+
+.portfolio{
+    background: linear-gradient(0deg, rgba(187, 133, 255, 0.7)  0%, rgba(255, 177, 222, 0.7) 100%);
+}
+
+.portfolio-content{
+    padding-top: 30px;
+    display: grid;
+    grid-template-columns: 570px 540px;
+}
+
+/* ==================== */
+
+/* ========== КЛИЕНТЫ ========== */
+
+.clients-content{
+    padding-top: 44px;
+    display: grid;
+    grid-template-columns: 220px 220px 220px 220px 220px;
+    grid-template-rows: 1rem(170px 170px 170px 170px 170px);
+}
+
+.square{
+    margin-left: 25px;
+    position: relative;
+    width: 170px;
+    height: 170px;
+    background-color:#FFF6FA;
+    border: 1 px #FFE7F0;
+    border-radius: 10px;
+    z-index: 0;
+}
+
+.pic5-1{
+    padding-top: 33px;
+    padding-left: 60px;
+    
+}
+
+.text5-1{
+    padding-top: 30px;
+    padding-left: 63px;
+    font-style: Medium;
+    font-size: 18px;
+    line-height: 24px;
+    color: #000000;
+}
+
+.pic5-2{
+    padding-top: 33px;
+    padding-left: 51px;
+}
+
+.text5-2{
+    padding-top: 30px;
+    padding-left: 52px;
+    font-style: Medium;
+    font-size: 18px;
+    line-height: 24px;
+    color: #000000;
+}
+
+.pic5-3{
+    padding-top: 33px;
+    padding-left: 60px;
+}
+
+.text5-3{
+    padding-top: 30px;
+    padding-left: 46px;
+    font-style: Medium;
+    font-size: 18px;
+    line-height: 24px;
+    color: #000000;
+}
+
+.pic5-4{
+    padding-top: 33px;
+    padding-left: 63px;
+}
+
+.text5-4{
+    padding-top: 30px;
+    padding-left: 60px;
+    font-style: Medium;
+    font-size: 18px;
+    line-height: 24px;
+    color: #000000;
+}
+
+.pic5-5{
+    padding-top: 33px;
+    padding-left: 63px;
+} 
+
+.text5-5{
+    padding-top: 30px;
+    padding-left: 53px;
+    font-style: Medium;
+    font-size: 18px;
+    line-height: 24px;
+    color: #000000;
+}
+
+/* ==================== */
+
+/* ========== МНЕНИЕ =========== */
+
+.testimonials{
+    padding-top: 150px;
+}
+
+/* === Слайдер === */
+
+.section-g {
+    padding-top: 30px;
+    height: 600px;
+    background-color: #FFFFFF;
+    position: relative;
+}
+
+.content-g {
+    width: 1280px/1366px * 100%;
+    max-width: 1366px;
+    margin: 0 auto;
+}
+
+.slider{
+    width: 1100px;
+    height: 500px;
+    overflow: hidden;    
+}
+
+.middle{
+    position: absolute;
+    top: -32.5%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+.navigation{
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.bar{
+    height: 8px;
+    width: 30px;
+    margin: 6px;
+    cursor: pointer;
+    background-color: #ddd;
+    opacity: .5;
+    border-radius: 10px;
+    transition: all .4s ease;
+}
+
+.bar:hover{
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+input[name="r"] {
+    position: absolute;
+    visibility: hidden;
+}
+  
+.slides{
+    width: 400%;
+    height: 100%;
+    display: flex;
+  }
+
+.slide{
+    width: 25%;
+    transition: all .6s ease;   
+}
+
+.slide img{
+    width: 100%;
+    height: 100%;
+}
+  
+#r1:checked ~ .s1 {
+    margin-left: 0;
+}
+  
+#r2:checked ~ .s1 {
+    margin-left: -25%;
+}
+  
+#r3:checked ~ .s1 {
+    margin-left: -50%;
+}
+  
+#r4:checked ~ .s1 {
+    margin-left: -75%;
+}
+
+/* ====== */
+
+/* ====================*/
+
+/* ========== БЛОГ =========== */
+
+.blog-content{
+    padding-top: 168px;
+    display: grid;
+    grid-template-columns: 190px 350px 30px 255px 30px 255px;
+    grid-template-rows: 2rem(350px 350px 350px 350px 350px 350px);
+}
+
+.pc-text{
+    margin-top: 20px;
+    margin-bottom: 0px;
+    color: #8643DC;
+}
+
+.pc-text2{
+    margin-top: 10px;
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+
+    color: #000000;
+}
+
+.el4{
+    position: relative;
+    background: linear-gradient(180deg, rgba(196, 196, 196, 0) 0%, #25202F 100%);
+}
+
+.el6{
+    position: relative;
+    background: linear-gradient(180deg, rgba(196, 196, 196, 0) 0%, #25202F 100%);
+}
+
+.ph2{
+   position: relative;
+   opacity: .6;
+}
+
+.pc-text3{
+    position: relative;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    margin-bottom: 2px;
+    margin-top: -120px;
+    margin-left: 20px;
+    color: #FFFFFF;
+}
+
+
+.pc-text4{
+    position: relative;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+    margin-top: 0px;
+    margin-left: 20px;
+    color: #FFFFFF;
+}
+
+.ph4{
+    position: relative;
+    opacity: .6;
+    
+}
+
+.pc-text5{
+    position: relative;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    margin-bottom: 2px;
+    margin-top: -90px;
+    margin-left: 20px;
+    color: #FFFFFF;
+}
+
+.pc-text6{
+    position: relative;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+    margin-top: 0px;
+    margin-left: 20px;
+    color: #FFFFFF;
+}
+
+/* ====================*/
+
+/* ========== КОНТАКТЫ ========== */
+
+.contact{
+    padding-top: 150px;
+}
+
+.form{
+    padding-top: 50px;
+}
+
+.form-group{
+    position: relative;
+    margin-bottom: 45px;
+}
+
+.form-label{
+    position: absolute;
+    left: 0;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+
+    opacity: 0.7;
+    color: #A8A0B0;
+    transition: 0.3s;
+    top: 0;
+    z-index: 1;
+    
+}
+
+.form-input{
+    width: 100%;
+    padding-left: 0;
+    padding-bottom: 17px;
+    border: none;
+    border-bottom: 1px solid #DAD2E3;
+    background-color: transparent;
+    outline: none;
+    transition: 0.3s;
+}
+
+.form-input:focus{
+ border-bottom: 1px solid #1a73a8;
+}
+
+.form-input:focus ~ .form-label,
+.form-input:not(:placeholder-shown) ~ .form-label{
+    top: -18px;
+    font-size: 12px;
+    opacity: 0.7;
+    color: #A8A0B0;
+}
+
+.title-mail{
+    position: relative;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 48px;
+    color: #21232D;
+
+    margin-top: 100px;
+    margin-left: 425px;
+}
+
+.pc8-1{
+    margin-left: 440px;
+}
+
+.pc8-2{
+    margin-left: 40px;
+}
+
+.pc8-3{
+    margin-left: 40px;
+}
+
+/* === Кнопка === */
+
+.form-batton{
+    display: inline-block;
+    background-color: #8643DC;
+    padding: 18px 49px 18px 50px;
+    border-radius: 100px;
+    color: #ffffff;
+    text-transform: uppercase
+}
+
+.mail-text{
+    padding-top: 100px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 48px;
+
+    margin-left: 425px;
+    margin-bottom: 30px;
+
+    color: #21232D;
+}
+
+
+
+
+/* === Конец кнопки === */
+
+/* ========== КОНЕЦ КОНТЕЙНЕР 8 ========== */
+/* ========== КОНТАКТЫ =========== */
+
